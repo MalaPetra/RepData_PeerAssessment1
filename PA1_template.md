@@ -108,6 +108,7 @@ ggplot(total_steps, aes(x = steps)) +
     geom_histogram(fill = "grey", binwidth = 500) +
     labs(title = "Daily Steps", x = "Steps", y = "Frequency")
 ```
+![](unnamed-chunk-5-1.png)
 
 ```
 ## Warning: Removed 8 rows containing non-finite values (stat_bin).
