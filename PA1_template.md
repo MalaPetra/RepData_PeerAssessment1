@@ -114,8 +114,6 @@ ggplot(total_steps, aes(x = steps)) +
 ## Warning: Removed 8 rows containing non-finite values (stat_bin).
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-5-1.png)<!-- -->
-
 3. Calculate and report the mean and median of the total number of steps taken per day
 
 
@@ -140,7 +138,7 @@ averageStepspertimeblock <- aggregate(x=list(meanSteps=activity$steps), by=list(
 ggplot(averageStepspertimeblock, aes(x = interval , y = meanSteps)) + geom_line(color="grey", size=1) + labs(title = "Avg. Daily Steps", x = "Interval", y = "Avg. Steps per day")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](unnamed-chunk-7-1.png)
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -206,7 +204,7 @@ ggplot(Total_Steps, aes(x = steps)) + geom_histogram(fill = "blue", binwidth = 1
 ## Don't know how to automatically pick scale for object of type impute. Defaulting to continuous.
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](unnamed-chunk-12-1.png)
 
 Type of Estimate | Mean_Steps | Median_Steps
 --- | --- | ---
@@ -252,4 +250,4 @@ Interval <- activity[, c(lapply(.SD, mean, na.rm = TRUE)), .SDcols = c("steps"),
 ggplot(Interval , aes(x = interval , y = steps, color=`weekday or weekend`)) + geom_line() + labs(title = "Avg. Daily Steps by Weektype", x = "Interval", y = "No. of Steps") + facet_wrap(~`weekday or weekend` , ncol = 1, nrow=2)
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-14-1.png)<!-- -->
+![](unnamed-chunk-14-1.png)
